@@ -6,3 +6,5 @@ apk --update --no-cache add python-dev py-pip git gcc make readline-dev ncurses-
 pip install --upgrade pip
 cd && git clone https://github.com/epinna/weevely3 && cd weevely3
 pip install -r requirements.txt
+
+rm -r /var/cache/apk/* 2>/dev/null
