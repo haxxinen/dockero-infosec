@@ -4,8 +4,9 @@
 pass='/tmp/pass.txt'
 ip='127.0.0.1'
 ignore='LOGON_FAILURE'
+# ignore='ERRCONNECT_LOGON_FAILURE' # Win10/WinServer16
 
 docker run --rm -it -v $pass:/F0 \
 -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=unix$DISPLAY \
 patator rdp_login host=$ip user='Administrator' password=FILE0 0=/F0 \
--x ignore:fgrep="$ignore"
+-x ignore:fgrep="$ignore" -t 5
