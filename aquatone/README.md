@@ -1,7 +1,7 @@
 #### 1. About
 
 - URL: `https://github.com/michenriksen/aquatone`
-- go tool for HTTP screenshots
+- Go tool for HTTP screenshots
 
 
 #### 2. Build
