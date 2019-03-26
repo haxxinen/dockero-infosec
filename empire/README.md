@@ -1,7 +1,7 @@
 #### 1. About
 
 - URL: `https://github.com/EmpireProject/Empire`
-- PowerShell and Python post-exploitation agent.
+- Empire PwerShell agent
 
 
 #### 2. Setup and run
