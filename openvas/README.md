@@ -1,7 +1,9 @@
 #### 1. Download and run
 ```
 # docker pull mikesplain/openvas
-# docker run -d -p 443:443 --name openvas mikesplain/openvas
+# mkdir /opt/openvas_workspace
+# docker run -d -p 443:443 -p 9390:9390 -e OV_PASSWORD=admin \
+-v /opt/openvas_workspace:/var/lib/openvas/mgr/ --name openvas mikesplain/openvas
 ```
 
 
@@ -10,23 +12,9 @@
 # docker exec -it openvas bash
 root@docker# greenbone-nvt-sync
 root@docker# openvasmd --rebuild --progress
-```
-
-
-#### 3. Run with OpenVAS manager
-```
-# docker run -d -p 443:443 -p 9390:9390 --name openvas mikesplain/openvas
-```
-
-
-#### 4. Reset admin password
-```
-# docker run -d -p 443:443 -e OV_PASSWORD=whatever --name openvas mikesplain/openvas
-```
-
-
-#### 5. Run with volume support
-```
-# mkdir openvas_workspace && cd openvas_workspace
-# docker run -d -p 443:443 -v `pwd`:/var/lib/openvas/mgr/ --name openvas mikesplain/openvas
+root@docker# greenbone-certdata-sync
+root@docker# greenbone-scapdata-sync
+root@docker# openvasmd --update --verbose --progress
+root@docker# /etc/init.d/openvas-manager restart
+root@docker# /etc/init.d/openvas-scanner restart
 ```
