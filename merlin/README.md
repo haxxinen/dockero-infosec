@@ -6,6 +6,7 @@
 
 #### 2. Setup server
 ```
+# docker pull golang
 # docker run --name merlin --rm -it -v /tmp/merlin:/tmp/merlin -p443:443 golang
 # go get github.com/Ne0nd0g/merlin 2>/dev/null
 # ln -s $GOPATH/src/github.com/Ne0nd0g/merlin /merlin
