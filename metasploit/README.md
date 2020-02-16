@@ -5,11 +5,21 @@
 
 
 #### 2. Setup and run
+
+Install:
 ```
 # docker pull metasploitframework/metasploit-framework
 # docker tag metasploitframework/metasploit-framework:latest msf
+```
+
+Expose ports on specific IP address and run:
+```
 # ip=`ip a | grep tun0 | grep inet | awk '{print $2}' | sed 's/\/.*//g'`
 # docker run --name msf -e ip=$ip -v /tmp:/tmp -p 4000-4010:4000-4010 -d --rm -it msf
+```
+
+Bash profile aliases (`~/.bash_aliases` or `~/.profile`):
+```
 # [[ -z `grep masfvenom ~/.profile` ]] && echo 'alias msfvenom="docker exec -it msf /usr/src/metasploit-framework/msfvenom"' >> ~/.profile
 # [[ -z `grep msfconsole ~/.profile` ]] && echo 'alias msfconsole="docker exec -it msf /usr/src/metasploit-framework/msfconsole"' >> ~/.profile
 ```
