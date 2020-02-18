@@ -5,11 +5,25 @@
 
 
 #### 2. Build & run
+
+Vanilla run:
 ```
 # docker build -t nmap .
 # docker run --rm -it nmap
 ```
 
+Run for HTB VPN interface:
+```
+# ip=`ip a | grep tun0 | grep inet | awk '{print $2}' | sed 's/\/.*//g'`
+# docker run -e ip=$ip -v /tmp:/tmp --rm -it nmap
+```
+
+Run scan in background (with hosts from list):
+```
+# docker run --rm --name nmap -v /tmp:/tmp -d nmap tail -f /dev/null
+# docker exec -it nmap sh
+# nmap -iL /tmp/ip.txt -p8080 -Pn -n --open -oX /tmp/results.xml 2>/dev/null &
+```
 
 #### 3. Examples
 ```
