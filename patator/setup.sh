@@ -8,7 +8,7 @@ libcurl4-openssl-dev python-dev python-pip libssl-dev ldap-utils ike-scan defaul
 libsqlite3-dev libsqlcipher-dev default-libmysqlclient-dev \
 git-core cmake xsltproc libx11-dev libxext-dev libxinerama-dev \
 libxcursor-dev libxdamage-dev libxv-dev libxkbfile-dev libasound2-dev libcups2-dev \
-libxml2 libxml2-dev libxrandr-dev libxi-dev libgstreamer-plugins-base1.0-dev
+libxml2 libxml2-dev libxrandr-dev libxi-dev libgstreamer-plugins-base1.0-dev libusb-dev libusb-1.0-0-dev
 
 pip install pyopenssl pyasn1 impacket pysqlcipher pyopenssl mysqlclient==1.3.12
 
