@@ -16,27 +16,8 @@
 
 ```
 # mkdir -p $HOME/.config/subfinder
-# cat << EOF > $HOME/.config/subfinder/config.json
-resolvers:
-  - 1.1.1.1
-  - 1.0.0.1
-sources:
-  - binaryedge
-  - bufferover
-  - censys
-  - passivetotal
-  - sitedossier
-binaryedge:
-  - <API_KEY>
-  - <API_KEY>
-censys:
-  - <API_KEY>
-certspotter: []
-passivetotal:
-  - <email>:<pwd>
-securitytrails: []
-shodan: []
-EOF
+# wget https://raw.githubusercontent.com/projectdiscovery/subfinder/master/config.yaml # modify this
+# mv config.yaml $HOME/.config/subfinder
 # docker run --rm -it -v $HOME/.config/subfinder:/root/.config/subfinder \
 subfinder -d example.com -silent > subfinder_results.txt
 ```
