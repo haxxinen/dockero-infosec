@@ -19,3 +19,10 @@ $ docker run --rm -it \
 -v `pwd`/words_alpha.txt:/tmp/words_alpha.txt \
 amass enum -v -src -ip -brute -norecursive -w /tmp/words_alpha.txt -d example.com
 ```
+
+#### 4. Custom config for API creds
+
+```
+$ wget https://raw.githubusercontent.com/OWASP/Amass/master/examples/config.ini
+$ mv config.ini $HOME/.config/amass/config.ini
+```
