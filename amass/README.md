@@ -6,13 +6,16 @@
 
 #### 2. Build
 ```
-# docker build -t amass https://github.com/OWASP/Amass.git
+$ docker build -t amass https://github.com/OWASP/Amass.git
+$ mkdir $HOME/.config/amass/
 ```
 
 
 #### 3. Run
 ```
-# wget -q https://raw.githubusercontent.com/dwyl/english-words/master/words_alpha.txt
-# docker run --rm -it -v `pwd`/words_alpha.txt:/tmp/words_alpha.txt \
+$ wget -q https://raw.githubusercontent.com/dwyl/english-words/master/words_alpha.txt
+$ docker run --rm -it \
+-v $HOME/.config/amass/:/.config/amass/ \
+-v `pwd`/words_alpha.txt:/tmp/words_alpha.txt \
 amass enum -v -src -ip -brute -norecursive -w /tmp/words_alpha.txt -d example.com
 ```
