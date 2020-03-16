@@ -23,6 +23,6 @@ amass enum -v -src -ip -brute -norecursive -w /tmp/words_alpha.txt -d example.co
 
 #### 4. Custom config for API creds
 ```
-# wget https://raw.githubusercontent.com/OWASP/Amass/master/examples/config.ini
+# wget https://raw.githubusercontent.com/OWASP/Amass/master/examples/config.ini # modify this
 # mv config.ini $HOME/.config/amass/config.ini
 ```
