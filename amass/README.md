@@ -12,6 +12,7 @@
 
 #### 3. Run
 ```
-# docker run --rm amass --passive -d example.com -v
-# docker run --rm amass -ip -d example.com -v
+# wget -q https://raw.githubusercontent.com/dwyl/english-words/master/words_alpha.txt
+# docker run --rm -it -v `pwd`/words_alpha.txt:/tmp/words_alpha.txt \
+amass enum -v -src -ip -brute -norecursive -w /tmp/words_alpha.txt -d example.com
 ```
