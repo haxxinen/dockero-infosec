@@ -6,8 +6,7 @@
 
 #### 2. Build
 ```
-# git clone https://github.com/sullo/nikto && cd nikto
-# docker build -t nikto .
+# docker build -t nikto https://github.com/sullo/nikto.git
 ```
 
 
