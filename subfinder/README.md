@@ -2,6 +2,9 @@
 
 - URL: `https://github.com/projectdiscovery/subfinder`
 - passive subdomain discovery tool
+- uses third party sources (PassiveTotal, Shodan, DNSDumpster)
+- like old aquatone, it can be configured to work with API keys for various services
+- similar to sublist3r (successor)
 
 #### 2. Build
 ```
@@ -9,10 +12,6 @@
 ```
 
 #### 3. Usage
-
-- uses third party sources (PassiveTotal, Shodan, DNSDumpster)
-- like old aquatone, it can be configured to work with API keys for various services
-- similar to sublist3r (successor)
 
 ```
 # mkdir -p $HOME/.config/subfinder
