@@ -12,6 +12,6 @@
 
 #### 3. Run
 ```
-# docker run --rm -it nikto -h http://192.168.9.11:8080
-# cat urls.txt | docker run --rm -it nikto -h -
+# docker run --rm -it nikto -timeout 3 -h http://192.168.9.11:8080
+# cat urls.txt | docker run --rm -it nikto -timeout 3 -h -
 ```
