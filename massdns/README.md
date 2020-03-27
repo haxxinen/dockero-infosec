@@ -8,3 +8,9 @@
 ```
 # docker build -t massdns .
 ```
+
+#### 3. Run
+```
+# touch /tmp/results.txt
+# docker run --rm -it -v /tmp/results.txt:/r -v /tmp/domains.txt:/d massdns
+```
