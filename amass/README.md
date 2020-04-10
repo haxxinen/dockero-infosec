@@ -26,18 +26,3 @@ amass enum -v -src -ip -brute -norecursive -w /tmp/words_alpha.txt -d example.co
 # wget https://raw.githubusercontent.com/OWASP/Amass/master/examples/config.ini # modify this
 # mv config.ini $HOME/.config/amass/config.ini
 ```
-
-#### 5. Data operations
-
-Get DNS records only:
-```
-$ awk '{print $2}' ~/.config/amass/amass.txt | grep example.com >> domains.txt
-$ awk '{print $3}' ~/.config/amass/amass.txt | grep example.com >> domains.txt
-```
-
-Get IPs only:
-```
-$ awk '{print $3}' ~/.config/amass/amass.txt | tr ',' '\n' | sort -u | grep -v 'example.com' >> IPs.txt
-$ awk '{print $4}' ~/.config/amass/amass.txt | tr ',' '\n' | sort -u | grep -v 'example.com' >> IPs.txt
-```
-
