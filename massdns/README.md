@@ -19,3 +19,10 @@ void.google.com
 # touch /tmp/massdns.txt
 # docker run --rm -it -v /tmp/massdns.txt:/r -v /tmp/domains.txt:/d massdns
 ```
+
+#### 4. Data processing
+
+```
+# awk '{print $1}' /tmp/massdns.txt | sed 's/.$//g' > /tmp/massdns_domains.txt
+# awk '{print $3}' /tmp/massdns.txt | sed 's/.$//g' > /tmp/massdns_resolved.txt
+```
