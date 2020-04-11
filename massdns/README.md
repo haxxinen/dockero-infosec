@@ -3,7 +3,6 @@
 - URL: `https://github.com/blechschmidt/massdns`
 - high-performance mass DNS resolver
 
-
 #### 2. Build
 ```
 # docker build -t massdns .
@@ -17,7 +16,6 @@ docs.google.com
 ipv6.google.com
 void.google.com
 > EOF
-# touch /tmp/results.txt
-# docker run --rm -it -v /tmp/results.txt:/r -v /tmp/domains.txt:/d massdns
-# cat /tmp/results.txt
+# touch /tmp/massdns.txt
+# docker run --rm -it -v /tmp/massdns.txt:/r -v /tmp/domains.txt:/d massdns
 ```
