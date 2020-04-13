@@ -8,3 +8,4 @@ wget https://public-dns.info/nameservers.txt -O /nameservers.txt
 git clone https://github.com/blechschmidt/massdns /tmp/massdns
 cd /tmp/massdns && make && mv bin/massdns /bin/massdns
 rm -r /tmp/massdns
+touch $results
