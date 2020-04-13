@@ -17,7 +17,7 @@ ipv6.google.com
 void.google.com
 EOF
 # touch /tmp/massdns.txt
-# docker run --rm -it -v /tmp/massdns.txt:/r -v /tmp/domains.txt:/d massdns
+# docker run --rm -it -v /tmp/massdns.txt:/tmp/masscan.txt -v /tmp/domains.txt:/d massdns
 ```
 
 #### 4. Data processing
