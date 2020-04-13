@@ -23,6 +23,6 @@ EOF
 #### 4. Data processing
 
 ```
-# awk '{print $1}' /tmp/massdns.txt | sed 's/.$//g' > /tmp/massdns_domains.txt
-# awk '{print $3}' /tmp/massdns.txt | sed 's/.$//g' > /tmp/massdns_resolved.txt
+# awk '{print $1}' /tmp/massdns.txt | sed 's/.$//g' | sort -u > /tmp/massdns_domains.txt
+# awk '{print $3}' /tmp/massdns.txt | sed 's/.$//g' | sort -u > /tmp/massdns_resolved.txt
 ```
