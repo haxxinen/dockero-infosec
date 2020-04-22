@@ -26,3 +26,9 @@ DNS mode:
 # docker run --rm -it -v $list:/x \
 gobuster dns -d example.com -t 50 -w /x --wildcard -q
 ```
+
+Using multiple files via `gobuster_enum.sh`:
+```
+# bash gobuster_enum.sh
+# sort -u /tmp/gobuster.txt
+```
