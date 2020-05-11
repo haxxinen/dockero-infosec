@@ -27,6 +27,12 @@ DNS mode:
 gobuster dns -d example.com -t 50 -w /x --wildcard -q
 ```
 
+VHost mode:
+```
+# list=/opt/SecLists/Discovery/Web-Content/raft-large-directories.txt
+# docker run --rm -it -v $list:/x gobuster vhost -u http://example.com -w /x -t 30 -q | grep -v 'Status: 400'
+```
+
 Using multiple files via `gobuster_enum.sh`:
 ```
 # bash gobuster_enum.sh
