@@ -1,9 +1,12 @@
 #!/usr/bin/env bash
 
 # update with your URL/path
-target='http://10.10.10.173'
+target='http://10.10.10.177:5000'
 output='/tmp/gobuster.txt'
 ext='php'
+t=30
+
+[[ -e $output ]] && rm $output
 
 #---------
 s='200,204,301,302,307,401'
@@ -19,12 +22,12 @@ files=(
    '/opt/SecLists/Discovery/Web-Content/raft-large-files.txt'
 )
 
-for list in ${dirs[@]}
-do
-   docker run --rm -it -v $list:/x gobuster dir -u $target -w /x -t 30 -a $a -s $s -kq -x $ext >> $output
-done
+list="/tmp/$RANDOM$RANDOM"
 
-for list in ${files[@]}
-do
-   docker run --rm -it -v $list:/x gobuster dir -u $target -w /x -t 30 -a $a -s $s -kq >> $output
-done
+cat ${dirs[@]} | tr 'A-Z' 'a-z' | sort -u > $list
+docker run --rm -it -v $list:/x gobuster dir -u $target -w /x -t $t -a $a -s $s -kq -x $ext >> $output
+
+cat ${dirs[@]} | tr 'A-Z' 'a-z' | sort -u > $list
+docker run --rm -it -v $list:/x gobuster dir -u $target -w /x -t $t -a $a -s $s -kq >> $output
+
+rm $list
