@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # update with your URL/path
-target='http://10.10.10.177:5000'
+target='http://example.com'
 output='/tmp/gobuster.txt'
 ext='php'
 t=30
