@@ -12,5 +12,5 @@
 
 #### 3. Example
 ```
-# docker run --rm -it thehrvester -d google.com
+# docker run --rm -it theharvester -d google.com
 ```
