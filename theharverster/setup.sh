@@ -9,3 +9,4 @@ pip3 install --upgrade pip
 cd && git clone https://github.com/laramies/theHarvester
 cd /root/theHarvester
 python3 -m pip install -r requirements.txt
+cd && mv /root/theHarvester /etc/theHarvester
