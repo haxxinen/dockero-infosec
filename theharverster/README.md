@@ -6,7 +6,7 @@
 
 #### 2. Build
 ```
-# docker build -t thehrvester .
+# docker build -t theharvester .
 ```
 
 
