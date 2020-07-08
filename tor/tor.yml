@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+
+  tor:
+      image: haxxinen/alpine_tor
+      container_name: tor
+      build:
+        context: .
+      ports:
+        - '127.0.0.1:9050:9050'
+      volumes:
+        - ./supervisord.conf:/etc/supervisord.conf
+        - /tmp/tor/:/var/lib/tor
+
+# docker-compose -f tor.yml build && docker-compose -f tor.yml up -d
+# http --proxy=http:socks5://127.0.0.1:9050 icanhazip.com -b
