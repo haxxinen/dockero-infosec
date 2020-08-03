@@ -1,9 +1,9 @@
-#### Build
+#### 1. Build
 ```
 # docker build -t freedome .
 ```
 
-#### Run
+#### 2. Run
 ```sh
 #!/usr/bin/env bash
 
@@ -23,13 +23,13 @@ Note:
 - `privoxy` external-listener must be used as upstream towards `127.0.0.1`
 
 
-#### Use as upstream proxy to `localhost` (could be the VM)
+#### 3. Use as upstream proxy to `localhost` (could be the VM)
 ```
 # http http://icanhazip.com --proxy=http:http://127.0.0.1:9991 -b
 # http https://icanhazip.com --proxy=https:http://127.0.0.1:9991 -b
 ```
 
-#### Handling inbound requests (from external into VM)
+#### 4. Handling inbound requests (from external into VM)
 ```
 # cat privoxy_DE.config
 listen-address  172.16.201.160:9991
@@ -38,6 +38,6 @@ forward   /     127.0.0.1:9991
 # http http://icanhazip.com --proxy=http:http://172.16.201.160:9991 -b
 ```
 
-#### Dynamically generate configs for each country
+#### 5. Dynamically generate configs for each country
 
 - run `make_configs.sh`
