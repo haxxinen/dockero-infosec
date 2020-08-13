@@ -6,7 +6,7 @@
 #### 2. Build
 ```
 # docker build -t amass https://github.com/OWASP/Amass.git
-# mkdir $HOME/.config/amass/
+# mkdir -p $HOME/.config/amass/
 ```
 
 #### 3. Run
