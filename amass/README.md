@@ -26,12 +26,7 @@ amass enum -ip -brute -min-for-recursive 3 -w /x -d example.com
 
 #### 5. Results
 
-Get DNS records only:
 ```
 # awk '{print $1}' ~/.config/amass/amass.txt | sort -u >> /tmp/amass_domains.txt
-```
-
-Get IPs only:
-```
 # awk '{print $2}' ~/.config/amass/amass.txt | tr ',' '\n' | sort -u >> /tmp/amass_IPs.txt
 ```
