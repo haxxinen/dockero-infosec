@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
 set -e
-apk --update --no-cache add python3 python3-dev \
+apk --update --no-cache add python3 python3-dev py3-pip \
 git gcc make musl-dev libffi-dev libxml2-dev libxslt-dev
 
 pip3 install --upgrade pip
