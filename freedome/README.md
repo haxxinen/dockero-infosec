@@ -12,21 +12,14 @@
 ```
 
 #### 2. Run
-```sh
-#!/usr/bin/env bash
-
-CONFIG='freedome-de-gw'
-PORT=9991
-
-docker run -d --rm --privileged \
---sysctl net.ipv6.conf.all.disable_ipv6=0 \
--p 127.0.0.1:$PORT:8118 \
--v `pwd`/configs/supervisord.conf:/etc/supervisord.conf \
---env CONFIG=$CONFIG.conf \
---name $CONFIG \
-freedome
 ```
-Note: 
+# export CONFIG='freedome-de-gw'
+# export PORT=9991
+# cd dockero-infosec/freedome
+# bash start_freedome.sh
+```
+
+Note:
 - to avoid routing issues it is recommended to listen on `127.0.0.1`
 - `privoxy` external-listener must be used as upstream towards `127.0.0.1`
 
