@@ -1,4 +1,4 @@
-### 0. Build `privoxy` image (dependency)
+#### 0. Build `privoxy` image (dependency)
 
 ```
 # git clone https://github.com/haxxinen/dockero-dev && cd dockero-dev/alpine_privoxy
