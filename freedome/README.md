@@ -41,4 +41,4 @@ forward   /     127.0.0.1:9991
 
 #### 5. Dynamically generate configs for each country
 
-- run `make_configs.sh`
+- run `configs/vpn_certs/make_configs.sh`
