@@ -7,6 +7,7 @@
 
 #### 1. Build
 ```
+# cd dockero-infosec/freedome
 # docker build -t freedome .
 ```
 
