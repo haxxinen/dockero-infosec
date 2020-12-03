@@ -1,3 +1,10 @@
+### 0. Build `privoxy` image (dependency)
+
+```
+# git clone https://github.com/haxxinen/dockero-dev && cd dockero-dev/alpine_privoxy
+# docker build -t privoxy .
+```
+
 #### 1. Build
 ```
 # docker build -t freedome .
