@@ -6,7 +6,6 @@
 
 #### 2. Build
 ```
-# git clone https://github.com/matlink/gplaycli-docker && cd gplaycli-docker
 # docker build -t gplaycli .
 ```
 
@@ -20,5 +19,6 @@ Search package:
 
 Download:
 ```
-# docker run --rm -it -v /tmp/apks:/tmp gplaycli -p -d <package_name> -f /tmp/
+# docker run --rm -it -v /tmp:/tmp gplaycli \
+-p -d <package_name> -f /tmp/
 ```
