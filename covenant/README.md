@@ -19,7 +19,7 @@ From: `https://github.com/cobbr/Covenant/wiki/Installation-And-Startup`
 
 ```
 # cd Covenant/Covenant
-# docker run -it -p 7443:7443 -p 80:80 -p 443:443 --name covenant -d -v `pwd`/Data>:/app/Data covenant
+# docker run -it -p 7443:7443 -p 80:80 -p 443:443 --name covenant -d -v `pwd`/Data:/app/Data covenant
 ```
 
 
