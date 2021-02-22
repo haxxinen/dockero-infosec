@@ -28,9 +28,9 @@ list="/tmp/$RANDOM$RANDOM"
 cat ${dirs[@]} ${files[@]} | tr 'A-Z' 'a-z' | sort -u > $list
 
 if [[ -n $ext ]]; then
-docker run --rm -it -v $list:/x gobuster dir -u $target -w /x -t $t -a $a -s $s -kq -x $ext >> $output
+docker run --rm -it -v /etc/hosts:/etc/hosts -v $list:/x gobuster dir -u $target -w /x -t $t -a $a -s $s -kq -x $ext >> $output
 else
-docker run --rm -it -v $list:/x gobuster dir -u $target -w /x -t $t -a $a -s $s -kq >> $output
+docker run --rm -it -v /etc/hosts:/etc/hosts -v $list:/x gobuster dir -u $target -w /x -t $t -a $a -s $s -kq >> $output
 fi
 
 rm $list
