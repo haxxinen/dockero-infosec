@@ -15,13 +15,14 @@ Install:
 Expose ports on specific IP address and run:
 ```
 # ip=`ip a | grep tun0 | grep inet | awk '{print $2}' | sed 's/\/.*//g'`
-# docker run --name msf -e ip=$ip -v /tmp:/tmp -p 4000-4010:4000-4010 -d --rm -it msf
+# docker run --name msf -e ip=$ip -v /tmp:/tmp -p 4000-4010:4000-4010 -d --rm -it msf bash
 ```
 
-Bash profile aliases (`~/.bash_aliases` or `~/.profile`):
+Aliases (`~/.bash_aliases`, `~/.profile`, or `~/.zsh/aliasrc`):
 ```
-# [[ -z `grep masfvenom ~/.profile` ]] && echo 'alias msfvenom="docker exec -it msf /usr/src/metasploit-framework/msfvenom"' >> ~/.profile
-# [[ -z `grep msfconsole ~/.profile` ]] && echo 'alias msfconsole="docker exec -it msf /usr/src/metasploit-framework/msfconsole"' >> ~/.profile
+# f="$HOME/.zsh/aliasrc"
+# [[ -z `grep masfvenom $f` ]] && echo 'alias msfvenom="docker exec -it msf /usr/src/metasploit-framework/msfvenom"' >> $f
+# [[ -z `grep msfconsole $f` ]] && echo 'alias msfconsole="docker exec -it msf /usr/src/metasploit-framework/msfconsole"' >> $f
 ```
 
 
