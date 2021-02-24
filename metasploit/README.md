@@ -15,7 +15,8 @@ Install:
 Expose ports on specific IP address and run:
 ```
 # ip=`ip a | grep tun0 | grep inet | awk '{print $2}' | sed 's/\/.*//g'`
-# docker run --name msf -e ip=$ip -v /tmp:/tmp -p 4000-4010:4000-4010 -d --rm -it msf bash
+# docker run --name msf -e ip=$ip -v /tmp:/tmp -p 4000-4010:4000-4010 -d --rm -it msf
+# docker exec -it msf /usr/src/metasploit-framework/msfconsole
 ```
 
 Aliases (`~/.bash_aliases`, `~/.profile`, or `~/.zsh/aliasrc`):
