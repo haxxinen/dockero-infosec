@@ -15,7 +15,7 @@
 Fuzz GET request parameter value:
 ```
 # list='/opt/SecLists/Fuzzing/LFI/LFI-Jhaddix.txt'
-# docker run --rm -it -v $list:/x wfuzz -w /x --hh 0 https://127.0.0.1/test.php?page=FUZZ
+# docker run --rm -it -v $list:/x wfuzz -w /x --hc 404,403 --hh 0 -c -Z https://127.0.0.1/test.php?page=FUZZ
 ```
 
 Fuzz POST request parameter name:
