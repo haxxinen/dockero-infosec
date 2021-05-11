@@ -5,7 +5,7 @@
 
 
 #### 2. Build
-``
+```
 # docker pull cmnatic/rustscan:debian-buster
 ```
 
