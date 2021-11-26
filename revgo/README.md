@@ -50,4 +50,3 @@
 | solaris                        | amd64                    |
 | windows                        | 386                      |
 | windows                        | amd64                    |
-|                                |                          |
