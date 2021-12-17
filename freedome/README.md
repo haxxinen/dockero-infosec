@@ -38,7 +38,3 @@ forward   /     127.0.0.1:9991
 # /usr/sbin/privoxy --user privoxy --no-daemon privoxy_DE.config
 # http http://icanhazip.com --proxy=http:http://172.16.201.160:9991 -b
 ```
-
-#### 5. Dynamically generate configs for each country
-
-- run `configs/vpn_certs/make_configs.sh`
