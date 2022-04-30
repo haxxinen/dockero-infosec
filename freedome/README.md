@@ -56,7 +56,7 @@ gw="freedome-${countries[$p]}"
 port=`shuf -i 1025-65535 -n 1`
 
 # run freedome container called $gw
-export CONFIG=$gw; export PORT=$port; bash start_freedome.sh 2>/dev/null
+export CONFIG=$gw; export PORT=$port; bash start_freedome.sh 2>/dev/null >/dev/null
 # set proxy
 export https_proxy="http://127.0.0.1:$port"
 export http_proxy="http://127.0.0.1:$port"
@@ -80,7 +80,6 @@ Running the script:
 {"city": "Parsippany", "country": "US", "hosting": true, "isp": "Leaseweb USA, Inc.", "lat": 40.8617, "lon": -74.4104, "mobile": false, "org": "LeaseWeb USA, Inc. New York", "proxy": false, "status": "success", "timezone": "America/New_York", "ipaddress": "173.234.158.87", "crawler": false, "reputation": "0"}
 
 # bash /tmp/random_gw.sh
-Running freedome-fr-gw gateway...
 {"city": "Paris", "country": "FR", "hosting": true, "isp": "ANEXIA Internetdienstleistungs GmbH", "lat": 48.8323, "lon": 2.4075, "mobile": false, "org": "ANX", "proxy": false, "status": "success", "timezone": "Europe/Paris", "ipaddress": "37.252.225.107", "crawler": false, "reputation": "0"}
 
 # parallel --null -j 4 < /bin/bash /tmp/random_gw.sh
