@@ -58,5 +58,6 @@ eyewitness --vnc -f /x --no-dns --threads 3 --max-retries=1 --timeout 5
 5. Run on Windows
 ```
 PS C:\Windows\Temp> mkdir eyewitness_workdir; cd eyewitness_workdir
+PS C:\Windows\Temp\eyewitness_workdir> ls URLs.txt
 PS C:\Windows\Temp\eyewitness_workdir> docker run --rm -it -v {PWD}:/tmp/EyeWitness -v {PWD}/URLs.txt:/x eyewitness --web -f /x --threads 30 --max-retries 2 --timeout 3 --jitter 3
 ```
