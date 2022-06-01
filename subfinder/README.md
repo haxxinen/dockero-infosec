@@ -15,8 +15,23 @@
 
 ```
 # mkdir -p $HOME/.config/subfinder
-# wget https://raw.githubusercontent.com/projectdiscovery/subfinder/master/config.yaml # modify this
-# mv config.yaml $HOME/.config/subfinder
+# nano $HOME/.config/subfinder/provider-config.yaml # modify this
 # docker run --rm -it -v $HOME/.config/subfinder:/root/.config/subfinder \
 subfinder -d example.com -silent > subfinder_results.txt
+```
+
+#### 4. Config example
+```
+binaryedge:
+  - <API_KEY>
+censys:
+  - <API_KEY>
+certspotter: [<API_KEY>]
+passivetotal:
+  - <API_KEY>
+securitytrails: [<API_KEY>]
+shodan:
+  - <API_KEY>
+virustotal:
+  - <API_KEY>
 ```
