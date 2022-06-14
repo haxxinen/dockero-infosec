@@ -13,7 +13,7 @@
 
 #### 3. Run
 
-Example 1:
+##### Example 1
 ```
 > pkg quickstart
 > pkg list
@@ -23,7 +23,7 @@ Example 1:
 > run
 ```
 
-Example 2:
+##### Example 2
 ```
 > use dns-resolve
 > run
@@ -35,11 +35,10 @@ Example 2:
 > select urls
 ```
 
-Example 3:
+##### Example 3
 ```
 > select domains
 > select domains where id=1
 > select domains where value like %.com
 > select domains where ( value like e% and value like %m ) or false
 ```
-
