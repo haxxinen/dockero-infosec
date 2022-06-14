@@ -29,13 +29,13 @@
 https://example.com
 http://example.com
 https://example.com:8080
-# docker run --rm -it -v `pwd`:/tmp/EyeWitness -v URLS.txt:/x \
+# docker run --rm -it -v `pwd`:/tmp/EyeWitness -v /tmp/targets.txt:/x \
 eyewitness --web -f /x --threads 30 --max-retries 2 --timeout 3 --jitter 3
 ```
 
 3. Socks proxy
 ```
-# docker run --rm -it -v `pwd`:/tmp/EyeWitness -v /tmp/urls.txt:/x \
+# docker run --rm -it -v `pwd`:/tmp/EyeWitness -v /tmp/targets.txt:/x \
 eyewitness --web -f /x --threads 3 --max-retries=1 --timeout 20 \
 --proxy-ip 192.168.9.11 --proxy-port 9050 --proxy-type socks5
 ```
@@ -59,5 +59,5 @@ eyewitness --vnc -f /x --no-dns --threads 3 --max-retries=1 --timeout 5
 ```
 PS C:\Windows\Temp> mkdir eyewitness_workdir; cd eyewitness_workdir
 PS C:\Windows\Temp\eyewitness_workdir> ls URLs.txt
-PS C:\Windows\Temp\eyewitness_workdir> docker run --rm -it -v {PWD}:/tmp/EyeWitness -v {PWD}/URLs.txt:/x eyewitness --web -f /x --threads 30 --max-retries 2 --timeout 3 --jitter 3
+PS C:\Windows\Temp\eyewitness_workdir> docker run --rm -it -v {PWD}:/tmp/EyeWitness -v {PWD}/targets.txt:/x eyewitness --web -f /x --threads 30 --max-retries 2 --timeout 3 --jitter 3
 ```
