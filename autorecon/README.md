@@ -1,18 +1,15 @@
-## [TODO] THIS IS BROKEN
-
 #### 1. About
 
 - URL: `https://github.com/Tib3rius/AutoRecon`
 - automated recon tool (many in one tool)
 
-
 #### 2. Build
 ```
-# docker build -t tib3rius/autorecon .
+# docker pull suezawa/autorecon
 ```
 
-
-#### 3. Example
+#### 3. Examples
 ```
-# docker run --rm -it -v /tmp/autorecon_results:/tmp/r tib3rius/autorecon -o /tmp/r 10.10.10.214
+# docker run --network host -it --rm --entrypoint=nmap suezawa/autorecon --top-ports 30 -Pn -open <target>
+# docker run --network host -it -v $HOME/autorecon/:/results suezawa/autorecon -v <target>
 ```
