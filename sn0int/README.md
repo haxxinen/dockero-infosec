@@ -4,6 +4,7 @@
 - Docs:
   - https://sn0int.com/
   - https://sn0int.readthedocs.io
+- Todo: compare with `recon-ng`
 
 #### 2. Build
 ```
