@@ -14,5 +14,5 @@
 ```
 # docker run --rm -it -v $HOME/.config/theharvester/api-keys.yaml:/app/api-keys.yaml \
 --entrypoint=/bin/bash theharvester
-root@dd093bb86031:/app# python3 ./theHarvester.py -d https://velliv.dk -b binaryedge
+root@dd093bb86031:/app# python3 ./theHarvester.py -d https://example.com -b binaryedge
 ```
