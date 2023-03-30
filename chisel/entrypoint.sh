@@ -15,5 +15,5 @@ env GOOS=linux GOARCH=amd64 garble -tiny -literals -seed=random build -o /tmp/$l
 env GOOS=darwin GOARCH=amd64 garble -tiny -literals -seed=random build -o /tmp/$mac"_obf" -ldflags="-w -s"
 # alternative obfuscation: unixpickle/gobfuscate
 
-rm -r /tmp/garble-shared*
+rm -r /tmp/garble-shared* 2>/dev/null
 echo "Successfully built executables in /tmp folder!"
