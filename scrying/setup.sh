@@ -5,7 +5,7 @@ cd /tmp
 
 # install scrying & depends
 wget https://github.com/nccgroup/scrying/releases/download/v0.9.2/scrying_0.9.2_amd64.deb
-dpkg -i scrying_0.9.2_amd64.deb
+dpkg -i scrying_0.9.2_amd64.deb 2>/dev/null
 apt-get install -f
 
 # fix libssl depends ¯\_(ツ)_/¯
