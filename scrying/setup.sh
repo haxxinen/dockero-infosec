@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-set -e
-
 apt-get update && apt-get install wget chromium-browser -yqq
 cd /tmp
 
