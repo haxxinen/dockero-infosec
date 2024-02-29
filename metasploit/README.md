@@ -19,6 +19,11 @@ Expose ports on specific IP address and run:
 # docker exec -it msf /usr/src/metasploit-framework/msfconsole
 ```
 
+Or just run instance in background:
+```
+# docker run --name msf -v /tmp:/tmp -p 4000-4010:4000-4010 -d --rm -it msf
+```
+
 Aliases (`~/.bash_aliases`, `~/.profile`, or `~/.zsh/aliasrc`):
 ```
 # f="$HOME/.zsh/aliasrc"
